@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --void: #030208;
+  --grid-line: rgba(34, 211, 238, 0.12);
+  --neon-cyan: #22d3ee;
+  --neon-fuchsia: #e879f9;
+  --foreground: #e4e4e7;
+}
+
+@theme inline {
+  --color-background: var(--void);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ibm-plex-mono);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+.font-display {
+  font-family: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: radial-gradient(ellipse 120% 80% at 50% -20%, rgba(34, 211, 238, 0.12), transparent),
+    radial-gradient(ellipse 90% 60% at 100% 50%, rgba(232, 121, 249, 0.08), transparent),
+    var(--void);
+  color: var(--foreground);
+  font-family: var(--font-ibm-plex-mono), ui-monospace, monospace;
+}
+
+@keyframes drift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 80px 120px, -60px 40px;
+  }
+}
+
+.mesh-drift {
+  animation: drift 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mesh-drift {
+    animation: none;
+  }
+}
