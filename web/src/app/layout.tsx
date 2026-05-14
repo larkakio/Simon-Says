@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: 'Neon Simon — Base',
     description: productionAppDescription,
     url: siteUrl,
-    images: [{ url: '/app-thumbnail.jpg', width: 1920, height: 1004 }],
+    images: [{ url: '/app-thumbnail.jpg', width: 1910, height: 999 }],
   },
 };
 
