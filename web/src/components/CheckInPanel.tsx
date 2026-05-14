@@ -67,10 +67,11 @@ export function CheckInPanel() {
         Daily on-chain check-in
       </h2>
       <p className="mt-1 text-xs text-zinc-400">
-        One check-in per UTC day on Base. You only pay gas. Builder Code
-        suffix is appended when{' '}
-        <code className="text-zinc-300">NEXT_PUBLIC_BUILDER_CODE</code> is
-        set.
+        One check-in per UTC day on Base. You only pay gas. Each check-in
+        appends an ERC-8021 data suffix for Base Builder Code attribution (
+        <code className="text-zinc-300">ox</code> /{' '}
+        <code className="text-zinc-300">Attribution.toDataSuffix</code>
+        ).
       </p>
       {!contractAddress ? (
         <p className="mt-3 font-mono text-xs text-amber-300">

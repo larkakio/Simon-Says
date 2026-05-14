@@ -4,3 +4,6 @@ export const productionSiteUrl =
 
 /** From Base developer dashboard — meta base:app_id verification. */
 export const productionBaseAppId = '6a0571cc8f636ba200aa022d' as const;
+
+/** Builder Code (Settings → Builder Codes). Short `bc_…` id — never a raw hex suffix. */
+export const productionBuilderCode = 'bc_vklc7o6d' as const;
