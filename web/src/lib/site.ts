@@ -8,3 +8,6 @@ export const productionBaseAppId = '6a0571cc8f636ba200aa022d' as const;
 /** Base App store / OG — max 180 chars on dashboard. */
 export const productionAppDescription =
   'Cyberpunk Simon Says for the Base App. Full-field swipes, synthetic audio cues, streak-friendly daily check-in on Base mainnet, and ERC-8021 Builder Code tagging when you check in.' as const;
+
+/** Builder Code (Settings → Builder Codes). Short `bc_…` id — never a raw hex suffix. */
+export const productionBuilderCode = 'bc_vklc7o6d' as const;
