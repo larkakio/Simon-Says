@@ -4,7 +4,11 @@ import { headers } from 'next/headers';
 import { cookieToInitialState, type State } from 'wagmi';
 import { Providers } from '@/components/providers';
 import { config } from '@/lib/wagmi/config';
-import { productionBaseAppId, productionSiteUrl } from '@/lib/site';
+import {
+  productionAppDescription,
+  productionBaseAppId,
+  productionSiteUrl,
+} from '@/lib/site';
 import './globals.css';
 
 const orbitron = Orbitron({
@@ -28,11 +32,10 @@ const baseAppId =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Neon Simon — Base',
-  description:
-    'Cyberpunk Simon Says with swipes, on Base. Daily check-in when you connect.',
+  description: productionAppDescription,
   openGraph: {
     title: 'Neon Simon — Base',
-    description: 'Swipe the grid. Beat the pulse. Check in on-chain.',
+    description: productionAppDescription,
     url: siteUrl,
     images: [{ url: '/app-thumbnail.jpg', width: 1920, height: 1004 }],
   },
