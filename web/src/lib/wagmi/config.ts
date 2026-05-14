@@ -6,6 +6,7 @@ import {
   http,
   injected,
 } from 'wagmi';
+import { productionSiteUrl } from '@/lib/site';
 import { baseAccount, walletConnect } from '@/lib/wagmi/connectorsDirect';
 
 const appName = 'Neon Simon';
@@ -23,8 +24,10 @@ const connectors = [
             name: appName,
             description: 'Simon Says on Base',
             url:
-              process.env.NEXT_PUBLIC_SITE_URL ?? 'https://example.com',
-            icons: [`${process.env.NEXT_PUBLIC_SITE_URL ?? ''}/app-icon.jpg`],
+              process.env.NEXT_PUBLIC_SITE_URL ?? productionSiteUrl,
+            icons: [
+              `${process.env.NEXT_PUBLIC_SITE_URL ?? productionSiteUrl}/app-icon.jpg`,
+            ],
           },
           showQrModal: true,
         }),

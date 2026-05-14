@@ -4,6 +4,7 @@ import { headers } from 'next/headers';
 import { cookieToInitialState, type State } from 'wagmi';
 import { Providers } from '@/components/providers';
 import { config } from '@/lib/wagmi/config';
+import { productionBaseAppId, productionSiteUrl } from '@/lib/site';
 import './globals.css';
 
 const orbitron = Orbitron({
@@ -20,9 +21,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  process.env.NEXT_PUBLIC_SITE_URL ?? productionSiteUrl;
 const baseAppId =
-  process.env.NEXT_PUBLIC_BASE_APP_ID ?? 'configure-base-app-id';
+  process.env.NEXT_PUBLIC_BASE_APP_ID ?? productionBaseAppId;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
